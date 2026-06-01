@@ -79,14 +79,12 @@ Generá `src/data/trip.ts` con exactamente esta información. Los horarios son *
 |---|-------|------|------------------|--------|---------|----------|-------------|------|
 | 1 | vie 7 ago | vuelo (internacional) | Buenos Aires EZE → Madrid MAD | ~14:00 | sáb 8, ~06:45 | ~12h45 directo | ~US$536 | Llegás sábado temprano: todo el sábado en Madrid. Iberia / Aerolíneas / Air Europa. |
 | 2 | lun 10 ago | tren | Madrid Atocha → Barcelona Sants | 09:00 | ~11:30 | 2h30 | €15–35 | AVE / Ouigo / Iryo. Sin cargo por equipaje. |
-| 3 | mié 12 ago | vuelo (interno, low-cost) | Barcelona BCN → Roma FCO | ~10:30 | ~12:25 | 1h55 | €19–35 + valija | Vueling / Ryanair. Único low-cost: se paga la 2ª pieza de equipaje. |
-| 4 | sáb 15 ago | tren | Roma Termini → Milán Centrale | 09:00 | ~12:00 | ~3h | €19–25 | Frecciarossa / Italo. |
-| 5 | lun 17 ago | tren | Milán Centrale → Venecia Santa Lucia | 08:00 | ~10:15 | 2h15 | €9–25 | Frecciarossa. Lockers en Santa Lucia (~€6). Día completo en Venecia. |
-| 6 | lun 17 ago | tren nocturno | Venecia → Budapest (vía Viena, ÖBB Nightjet) | ~20:30 | mar 18 a la mañana | ~11h | litera €50–70 | Dormís en el tren (ahorra una noche de hostel). Reservar apenas abra la venta. Confirmar conexión en Viena. |
-| 7 | vie 21 ago | bus | Budapest Népliget → Praga Florenc | 08:00 | ~15:00 | ~7h | €14–21 | RegioJet / FlixBus. Equipaje incluido. |
-| 8 | lun 24 ago | tren | Praga hl.n. → Berlín Hbf | 06:31 | ~10:46 | 4h15 | €19–26 | EC ComfortJet. **OBRAS DE VÍA los lunes: el 06:31 es el único tren que corre.** Alternativa: FlixBus (~4h30, €15–25). Reserva de asiento obligatoria en verano. |
-| 9 | jue 27 ago | tren | Berlín Hbf → Amsterdam Centraal | ~08:15 | ~14:30 | ~6h15 | €38–60 | ICE directo (sale cada ~2h). |
-| 10 | sáb 29 ago | vuelo (internacional) | Amsterdam AMS → Buenos Aires EZE | ~21:30 | dom 30, ~06:00 | ~13h45 directo | ~US$623 | KLM directo o 1 escala. Tenés el sábado entero en Amsterdam. |
+| 3 | mié 12 ago | vuelo (interno, low-cost) | Barcelona BCN → Roma FCO | ~10:30 | ~12:25 | 1h55 | €19–35 + valija | Vueling / Ryanair. Cargo por 2ª pieza de equipaje (~€10–30 pp). |
+| 4 | vie 14 ago | vuelo (interno, low-cost) | Roma FCO → Budapest BUD | ~10:30 | ~13:00 | ~2h30 | €20–50 + valija | Ryanair / Wizz Air. Cargo por 2ª pieza de equipaje (~€10–30 pp). Llegás con el finde por delante. |
+| 5 | mar 18 ago | bus | Budapest Népliget → Praga Florenc | 08:00 | ~15:00 | ~7h | €14–21 | RegioJet / FlixBus. Equipaje incluido. |
+| 6 | vie 21 ago | tren | Praga hl.n. → Berlín Hbf | ~09:00 | ~13:15 | 4h15 | €19–26 | EC ComfortJet. Múltiples salidas en viernes. Reservar asiento con anticipación en verano. |
+| 7 | mar 25 ago | tren | Berlín Hbf → Amsterdam Centraal | ~08:15 | ~14:30 | ~6h15 | €38–60 | ICE directo (sale cada ~2h). |
+| 8 | sáb 29 ago | vuelo (internacional) | Amsterdam AMS → Buenos Aires EZE | ~21:30 | dom 30, ~06:00 | ~13h45 directo | ~US$623 | KLM directo o 1 escala. Tenés el sábado entero en Amsterdam. |
 
 ### Estadías (por ciudad)
 
@@ -94,27 +92,24 @@ Generá `src/data/trip.ts` con exactamente esta información. Los horarios son *
 |--------|--------|--------|----------------------|-------------|
 | Madrid | 2 | sáb 8, dom 9 | Malasaña / Lavapiés | Agosto medio vacío, noche tranquila. |
 | Barcelona | 2 | lun 10, mar 11 | Gòtic / Poble Sec | Gràcia, Barceloneta, La Boquería. |
-| Roma | 3 | mié 12, jue 13, vie 14 | Trastevere / cerca de Termini | Calor fuerte: arrancar temprano. Reservar Coliseo y Vaticano online. |
-| Milán | 2 | sáb 15, dom 16 | centro / Navigli | **Ferragosto (15 ago)**: ciudad vacía, sin colas en el Duomo, pero noche floja. |
-| Venecia | 0 (solo de día, lun 17) | — | — | Mochilas en lockers. San Marco, Rialto, Dorsoduro, Burano si da el tiempo. |
-| Budapest | 3 (+ noche del tren) | mar 18, mié 19, jue 20 | Distrito VII (ruin bars) | Baños Széchenyi, Szimpla Kert, Buda. Birra ~€1–2. |
-| Praga | 3 | vie 21, sáb 22, dom 23 | Žižkov / Vinohrady | Finde completo: el sábado es la noche fuerte de joda. |
-| Berlín | 3 | lun 24, mar 25, mié 26 | Kreuzberg / Friedrichshain | — |
-| Amsterdam | 2 | jue 27, vie 28 | Jordaan / De Pijp | Bici, canales, mercado Albert Cuyp para comer barato. |
+| Roma | 2 | mié 12, jue 13 | Trastevere / cerca de Termini | Calor fuerte: arrancar temprano. Reservar Coliseo y Vaticano online. |
+| Budapest | 4 | vie 14, sáb 15, dom 16, lun 17 | Distrito VII (ruin bars) | Finde completo: Széchenyi, Szimpla Kert, Instant, Buda. Birra ~€1–2. |
+| Praga | 3 | mar 18, mié 19, jue 20 | Žižkov / Vinohrady | Entre semana, más tranquila. Jue 20 es la última noche antes de Berlín. |
+| Berlín | 4 | vie 21, sáb 22, dom 23, lun 24 | Kreuzberg / Friedrichshain | Finde completo: vie-sáb para salir fuerte. El barrio más barato del viaje. |
+| Amsterdam | 4 | mar 25, mié 26, jue 27, vie 28 | Jordaan / De Pijp | Vie 28 última noche → vuelo sáb 29. Bici, canales, mercado Albert Cuyp. |
 
 ### Presupuesto de transporte (referencia, por persona)
 - Vuelos internacionales (EZE→MAD + AMS→EZE, open-jaw): ~US$1.000–1.250
-- Tramos europeos (5 trenes + 1 tren nocturno + 1 bus + 1 vuelo interno): ~€190–320 + ~€10–30 de equipaje extra (un solo vuelo low-cost)
-- **Total transporte por persona: ~US$1.235–1.640**
-- **Para los dos: ~US$2.470–3.280**
+- Tramos europeos (3 trenes + 1 bus + 2 vuelos low-cost): ~€150–280 + ~€20–60 de equipaje extra (dos vuelos low-cost)
+- **Total transporte por persona: ~US$1.210–1.610**
+- **Para los dos: ~US$2.420–3.220**
 - No incluye: hostels, comida, salidas, actividades.
 
 ### Links de operadores (para los botones de reserva)
 - Vuelos internacionales: Google Flights (calendario abierto ±2-3 días)
 - Trenes España: renfe.com / ouigo.es / iryo.eu
 - Vuelo BCN→Roma: vueling.com / ryanair.com
-- Trenes Italia: trenitalia.com / italotreno.com
-- Tren nocturno Venecia→Budapest: nightjet.com / oebb.at
+- Vuelo Roma→Budapest: ryanair.com / wizzair.com
 - Bus Budapest→Praga: regiojet.com / flixbus.com
 - Tren Praga→Berlín y Berlín→Amsterdam: bahn.de
 - Hostels: hostelworld.com
@@ -125,21 +120,19 @@ Generá `src/data/trip.ts` con exactamente esta información. Los horarios son *
 
 Estos son los que evitan cagadas. Mostralos como alertas (un ícono de atención, texto corto), no como párrafos:
 
-1. **Ferragosto (15 ago)**: Milán y el norte de Italia se vacían ese finde. Bueno para ver el Duomo sin colas, flojo para salir de noche.
-2. **Lunes 24, Praga→Berlín**: obras de vía → solo corre el tren de las 06:31. Si no, FlixBus. **No dejar esto para improvisar el día.**
-3. **Tren nocturno Venecia→Budapest**: reservar apenas abra la venta (las literas baratas se agotan). Confirmar si la conexión en Viena es directa o con cambio.
-4. **Reserva de asiento obligatoria en verano** en el EC Praga→Berlín.
-5. **Equipaje**: mochila + carry-on. El único tramo que cobra 2ª pieza es el vuelo low-cost BCN→Roma (~€10–30 pp). Trenes y buses: sin cargo.
-6. **Venecia**: dejar las mochilas en los lockers de Santa Lucia (~€6) para recorrer liviano.
-7. **Día más coreografiado: lunes 17** (tren 08:00 Milán → día en Venecia → tren nocturno 20:30). El resto son traslados tranquilos.
+1. **Dos vuelos low-cost europeos** (BCN→Roma y Roma→Budapest): ambos cobran 2ª pieza de equipaje (~€10–30 pp c/u). Confirmá tarifas al reservar.
+2. **Praga→Berlín (vie 21)**: ahora es viernes, sin obras de vía. Aun así reservar asiento con anticipación — los trenes de verano se llenan.
+3. **Berlín→Amsterdam (mar 25)**: ICE directo, reservar con anticipación. Se llena en temporada alta.
+4. **Budapest**: llegada viernes 14 → finde completo en el Distrito VII. El sábado es la noche fuerte de los ruin bars.
 
 ### Orden sugerido de reserva (para la checklist)
 1. Vuelos internacionales (75–80% del costo, los que más varían).
-2. Tren nocturno Venecia→Budapest (se llena rápido).
-3. Praga→Berlín y Berlín→Amsterdam (reserva de asiento, se llenan en verano).
-4. Trenes de España e Italia (tarifa anticipada barata).
-5. Bus Budapest→Praga (último, casi siempre hay lugar).
-6. Hostels en Hostelworld (filtrar rating ≥ 8, buena vibra social).
+2. Vuelos low-cost europeos (BCN→Roma y Roma→Budapest) — reservar juntos para controlar fechas y equipaje.
+3. Tren Berlín→Amsterdam (se llena en verano).
+4. Tren Praga→Berlín (reserva de asiento recomendada).
+5. Tren Madrid→Barcelona (tarifa anticipada barata).
+6. Bus Budapest→Praga (último, casi siempre hay lugar).
+7. Hostels en Hostelworld (filtrar rating ≥ 8, buena vibra social).
 
 ---
 
@@ -162,7 +155,7 @@ Dirección estética sugerida (comprometerse con una, ejecutarla con precisión)
 - **Resaltado de "hoy"**: el tramo/ciudad actual con el acento fuerte; el resto, atenuado. Que se entienda de un vistazo dónde estás.
 - **Accesibilidad**: contraste suficiente, foco visible, tamaños tocables (mín. 44px). Nada de fuentes por debajo de 12px.
 
-Si hace falta mapa: usar `react-simple-maps` o `leaflet` con tiles livianos; marcar las 9 ciudades + Venecia y la línea de ruta. El mapa es secundario, que no trabe el MVP ni rompa el offline.
+Si hace falta mapa: usar `react-simple-maps` o `leaflet` con tiles livianos; marcar las 7 ciudades y la línea de ruta. El mapa es secundario, que no trabe el MVP ni rompa el offline.
 
 ---
 

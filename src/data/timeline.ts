@@ -7,12 +7,10 @@ const LEG_ARRIVES_AT: Record<string, string> = {
   'leg-1': 'Madrid',
   'leg-2': 'Barcelona',
   'leg-3': 'Roma',
-  'leg-4': 'Milán',
-  'leg-5': 'Venecia',
-  'leg-6': 'Budapest',
-  'leg-7': 'Praga',
-  'leg-8': 'Berlín',
-  'leg-9': 'Amsterdam',
+  'leg-4': 'Budapest',
+  'leg-5': 'Praga',
+  'leg-6': 'Berlín',
+  'leg-7': 'Amsterdam',
 };
 
 export interface LegItem {

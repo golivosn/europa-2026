@@ -1,6 +1,6 @@
 import { META } from '../data/trip';
 
-const ROUTE = ['EZE', 'MAD', 'BCN', 'ROM', 'MIL', 'VCE', 'BUD', 'PRG', 'BER', 'AMS', 'EZE'];
+const ROUTE = ['EZE', 'MAD', 'BCN', 'ROM', 'BUD', 'PRG', 'BER', 'AMS', 'EZE'];
 
 export function Hero() {
   return (
@@ -36,7 +36,7 @@ export function Hero() {
                 <span className="font-mono text-xs font-bold text-white/80 tracking-wider">{city}</span>
                 {i < ROUTE.length - 1 && (
                   <span className="text-white/25 text-xs">
-                    {city === 'EZE' || city === 'BCN' ? '✈' : '→'}
+                    {city === 'EZE' || city === 'BCN' || city === 'ROM' ? '✈' : '→'}
                   </span>
                 )}
               </span>
