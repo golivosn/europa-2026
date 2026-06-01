@@ -66,8 +66,8 @@ export const LEGS: Leg[] = [
     depart: '10:30',
     arrive: '12:25',
     duration: '1h55',
-    pricePerPerson: '€19–35 + valija',
-    note: 'Vueling / Ryanair. Cargo por 2ª pieza de equipaje (~€10–30 pp).',
+    pricePerPerson: '~US$70',
+    note: 'Vueling / Ryanair. Precio con carry-on incluido.',
     approxTimes: true,
     bookingUrl: 'https://www.vueling.com',
   },
@@ -81,8 +81,8 @@ export const LEGS: Leg[] = [
     depart: '10:30',
     arrive: '13:00',
     duration: '2h30',
-    pricePerPerson: '€20–50 + valija',
-    note: 'Ryanair / Wizz Air. Cargo por 2ª pieza de equipaje (~€10–30 pp). Llegás el sábado → finde completo.',
+    pricePerPerson: '~US$70',
+    note: 'Ryanair / Wizz Air. Precio con carry-on incluido. Llegás el sábado → finde completo.',
     approxTimes: true,
     bookingUrl: 'https://www.wizzair.com',
   },
@@ -223,7 +223,7 @@ export const ALERTS: Alert[] = [
   },
   {
     id: 'alert-2',
-    text: 'Dos vuelos low-cost (BCN→Roma y Roma→Budapest): ambos cobran 2ª pieza de equipaje (~€10–30 pp c/u). Confirmá las tarifas al reservar.',
+    text: 'Vuelos low-cost BCN→Roma y Roma→Budapest: precio ~US$70 con carry-on. Si llevás bolso de mano + mochila verificá que entren en cabina para no pagar extra.',
     legId: 'leg-3',
   },
   {
@@ -283,7 +283,7 @@ export const CHECKLIST: ChecklistItem[] = [
 
 export const BUDGET: BudgetSummary = {
   intlFlightsUsd: 'US$1.225–1.255 (open-jaw EZE↔MAD/AMS) + US$110–170 domésticos (COR↔EZE/AEP)',
-  europeanLegsEur: '~€230–320 trenes + 2 vuelos low-cost + ~€20–60 equipaje',
-  totalPerPersonUsd: '~US$1.585–1.785',
-  totalTwoPersonsUsd: '~US$3.170–3.570',
+  europeanLegsEur: '~€170 trenes (€37+€45+€22+€66) + US$140 vuelos low-cost (2×$70)',
+  totalPerPersonUsd: '~US$1.650–1.760',
+  totalTwoPersonsUsd: '~US$3.300–3.520',
 };
