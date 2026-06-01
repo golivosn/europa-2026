@@ -12,18 +12,33 @@ export const META: TripMeta = {
 
 export const LEGS: Leg[] = [
   {
+    id: 'leg-0',
+    date: '2026-08-07',
+    dow: 'Vie',
+    mode: 'flight-intl',
+    from: 'Córdoba COR',
+    to: 'Buenos Aires EZE',
+    depart: '11:45',
+    arrive: '13:05',
+    duration: '1h20',
+    pricePerPerson: '~$70',
+    note: 'Aerolíneas Argentinas. Da tiempo para llegar a EZE antes del vuelo nocturno.',
+    approxTimes: false,
+    bookingUrl: 'https://www.aerolineas.com.ar',
+  },
+  {
     id: 'leg-1',
     date: '2026-08-07',
     dow: 'Vie',
     mode: 'flight-intl',
     from: 'Buenos Aires EZE',
     to: 'Madrid MAD',
-    depart: '14:00',
-    arrive: '06:45 (+1)',
-    duration: '12h45',
-    pricePerPerson: '~US$536',
-    note: 'Llegás sábado temprano: todo el sábado en Madrid. Iberia / Aerolíneas / Air Europa.',
-    approxTimes: true,
+    depart: '21:40',
+    arrive: 'Sáb 8, 14:30',
+    duration: '11h50',
+    pricePerPerson: 'open-jaw ~US$1.240 pp',
+    note: 'Iberia directo. Llegás sábado a las 14:30 — toda la tarde en Madrid. (Precio incluye vuelta AMS→EZE.)',
+    approxTimes: false,
     bookingUrl: 'https://www.google.com/flights',
   },
   {
@@ -123,13 +138,28 @@ export const LEGS: Leg[] = [
     mode: 'flight-intl',
     from: 'Amsterdam AMS',
     to: 'Buenos Aires EZE',
-    depart: '21:30',
-    arrive: 'Dom 30, 06:00',
-    duration: '13h45',
-    pricePerPerson: '~US$623',
-    note: 'KLM directo o 1 escala. Tenés el sábado entero en Amsterdam.',
-    approxTimes: true,
+    depart: '19:25',
+    arrive: 'Dom 30, 07:40',
+    duration: '17h15',
+    pricePerPerson: 'incluido en open-jaw',
+    note: 'Iberia, 1 escala en Madrid. Llegás dom 30 a las 07:40 a EZE. Tenés el sábado entero en Amsterdam.',
+    approxTimes: false,
     bookingUrl: 'https://www.google.com/flights',
+  },
+  {
+    id: 'leg-9',
+    date: '2026-08-30',
+    dow: 'Dom',
+    mode: 'flight-intl',
+    from: 'Buenos Aires AEP',
+    to: 'Córdoba COR',
+    depart: '11:05',
+    arrive: '12:35',
+    duration: '1h30',
+    pricePerPerson: '~$70',
+    note: 'Aerolíneas Argentinas. Uber desde EZE a AEP previo (~1h de viaje).',
+    approxTimes: false,
+    bookingUrl: 'https://www.aerolineas.com.ar',
   },
 ];
 
@@ -188,16 +218,21 @@ export const STAYS: Stay[] = [
 export const ALERTS: Alert[] = [
   {
     id: 'alert-1',
+    text: 'Vuelta: llegada EZE dom 30 a las 07:40. Uber EZE→AEP (~1h). Vuelo AEP→COR sale 11:05. Margen justo — no demorar en inmigración.',
+    legId: 'leg-9',
+  },
+  {
+    id: 'alert-2',
     text: 'Dos vuelos low-cost (BCN→Roma y Roma→Budapest): ambos cobran 2ª pieza de equipaje (~€10–30 pp c/u). Confirmá las tarifas al reservar.',
     legId: 'leg-3',
   },
   {
-    id: 'alert-2',
+    id: 'alert-3',
     text: 'Berlín→Amsterdam (mar 25): ICE 148, reservar con anticipación. Se llena en temporada alta.',
     legId: 'leg-7',
   },
   {
-    id: 'alert-3',
+    id: 'alert-4',
     text: 'Budapest: llegada el viernes 14 → finde completo en el Distrito VII. El sábado es la noche fuerte de los ruin bars.',
     legId: 'leg-4',
   },
@@ -207,7 +242,12 @@ export const CHECKLIST: ChecklistItem[] = [
   {
     id: 'check-1',
     label: 'Vuelos internacionales',
-    detail: 'EZE→MAD + AMS→EZE (open-jaw). 75–80% del costo total, los que más varían.',
+    detail: 'Open-jaw EZE→MAD + AMS→EZE (Iberia, ~US$1.240 pp). El mayor costo del viaje.',
+  },
+  {
+    id: 'check-1b',
+    label: 'Vuelos domésticos AR',
+    detail: 'COR→EZE (vie 7, 11:45) y AEP→COR (dom 30, 11:05), Aerolíneas Argentinas, ~$70 c/u.',
   },
   {
     id: 'check-2',
@@ -242,8 +282,8 @@ export const CHECKLIST: ChecklistItem[] = [
 ];
 
 export const BUDGET: BudgetSummary = {
-  intlFlightsUsd: '~US$1.000–1.250',
-  europeanLegsEur: '~€172 trenes/buses + vuelos low-cost + equipaje',
-  totalPerPersonUsd: '~US$1.200–1.600',
-  totalTwoPersonsUsd: '~US$2.400–3.200',
+  intlFlightsUsd: 'US$1.240 (open-jaw EZE↔MAD/AMS) + ~$140 vuelos domésticos COR↔EZE',
+  europeanLegsEur: '~€172 (tren+bus+tren+tren) + 2 vuelos low-cost + equipaje',
+  totalPerPersonUsd: '~US$1.420–1.600',
+  totalTwoPersonsUsd: '~US$2.840–3.200',
 };

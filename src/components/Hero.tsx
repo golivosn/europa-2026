@@ -1,6 +1,8 @@
 import { META } from '../data/trip';
 
-const ROUTE = ['EZE', 'MAD', 'BCN', 'ROM', 'BUD', 'PRG', 'BER', 'AMS', 'EZE'];
+const ROUTE = ['COR', 'EZE', 'MAD', 'BCN', 'ROM', 'BUD', 'PRG', 'BER', 'AMS', 'EZE', 'AEP', 'COR'];
+// ✈ where there's a flight to the next city, → otherwise
+const ROUTE_SEP = ['✈', '✈', '→', '✈', '✈', '→', '→', '→', '✈', '→', '✈'];
 
 export function Hero() {
   return (
@@ -35,9 +37,7 @@ export function Hero() {
               <span key={i} className="flex items-center gap-1">
                 <span className="font-mono text-xs font-bold text-white/80 tracking-wider">{city}</span>
                 {i < ROUTE.length - 1 && (
-                  <span className="text-white/25 text-xs">
-                    {city === 'EZE' || city === 'BCN' || city === 'ROM' ? '✈' : '→'}
-                  </span>
+                  <span className="text-white/25 text-xs">{ROUTE_SEP[i]}</span>
                 )}
               </span>
             ))}
