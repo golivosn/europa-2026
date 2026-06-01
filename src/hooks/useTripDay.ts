@@ -6,10 +6,10 @@ const TRIP_LAST_DAY = '2026-08-29';
 const TRIP_DAYS_TOTAL = 22;
 
 const CITY_SCHEDULE: { city: string; from: string; to: string }[] = [
-  { city: 'Madrid', from: '2026-08-08', to: '2026-08-09' },
-  { city: 'Barcelona', from: '2026-08-10', to: '2026-08-11' },
-  { city: 'Roma', from: '2026-08-12', to: '2026-08-13' },
-  { city: 'Budapest', from: '2026-08-14', to: '2026-08-17' },
+  { city: 'Madrid', from: '2026-08-08', to: '2026-08-10' },
+  { city: 'Barcelona', from: '2026-08-11', to: '2026-08-12' },
+  { city: 'Roma', from: '2026-08-13', to: '2026-08-14' },
+  { city: 'Budapest', from: '2026-08-15', to: '2026-08-17' },
   { city: 'Praga', from: '2026-08-18', to: '2026-08-20' },
   { city: 'Berlín', from: '2026-08-21', to: '2026-08-24' },
   { city: 'Amsterdam', from: '2026-08-25', to: '2026-08-28' },
