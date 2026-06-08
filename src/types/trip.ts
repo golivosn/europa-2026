@@ -14,6 +14,8 @@ export interface Leg {
   note: string;
   approxTimes: boolean;
   bookingUrl?: string;
+  bookingRef?: string;
+  seats?: string;
   isAlert?: boolean;
 }
 

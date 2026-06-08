@@ -90,23 +90,35 @@ export function LegCard({ leg, isToday }: Props) {
           </div>
         </div>
 
-        {/* Price + book */}
+        {/* Price + booking */}
         <div className="flex items-center justify-between pt-3 border-t border-paper-dark">
           <span className="font-mono text-sm font-bold text-ink">
             {leg.pricePerPerson}
             <span className="font-sans font-normal text-xs text-ink-faint ml-1">/ persona</span>
           </span>
-          {leg.bookingUrl && (
+          {leg.bookingRef ? (
+            <span className={`text-xs font-mono px-3 py-1.5 rounded-lg border ${m.text} ${m.border}`}>
+              Reserva {leg.bookingRef}
+            </span>
+          ) : leg.bookingUrl ? (
             <a
               href={leg.bookingUrl}
               target="_blank"
               rel="noopener noreferrer"
               className={`text-xs font-mono px-3 py-1.5 rounded-lg border transition-colors ${m.text} ${m.border} hover:opacity-80`}
             >
-              Reservar →
+              Gestionar →
             </a>
-          )}
+          ) : null}
         </div>
+
+        {/* Seats */}
+        {leg.seats && (
+          <div className="mt-2 flex items-center gap-1.5 text-xs text-ink-muted">
+            <span className={m.text}>◫</span>
+            <span className="font-mono">{leg.seats}</span>
+          </div>
+        )}
 
         {/* Note */}
         {leg.note && (

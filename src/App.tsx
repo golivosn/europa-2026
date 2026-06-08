@@ -120,7 +120,7 @@ export default function App() {
 
             {/* Budget */}
             <div>
-              <SectionLabel>Transporte estimado</SectionLabel>
+              <SectionLabel>Transporte reservado</SectionLabel>
               <div className="space-y-1.5">
                 <div className="flex justify-between text-sm">
                   <span className="text-ink-muted">Por persona</span>
