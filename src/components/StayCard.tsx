@@ -23,6 +23,25 @@ export function StayCard({ stay, isCurrent }: Props) {
           : 'border-paper-dark'
       }`}
     >
+      {/* Gallery */}
+      {stay.photos.length > 0 && (
+        <div className="flex gap-1 overflow-x-auto snap-x snap-mandatory bg-ink-faint/10">
+          {stay.photos.map((src, i) => (
+            <img
+              key={src}
+              src={src}
+              alt={`${stay.hostelName} — foto ${i + 1}`}
+              loading="lazy"
+              referrerPolicy="no-referrer"
+              className="h-40 w-[85%] sm:w-[48%] shrink-0 object-cover snap-start"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).style.display = 'none';
+              }}
+            />
+          ))}
+        </div>
+      )}
+
       {/* Header */}
       <div className="px-4 pt-4 pb-3">
         <div className="flex items-baseline justify-between gap-2 mb-0.5">

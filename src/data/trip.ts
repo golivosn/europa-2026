@@ -205,6 +205,11 @@ export const LEGS: Leg[] = [
 export const STAYS: Stay[] = [
   {
     id: 'stay-madrid',
+    photos: [
+      'https://a.hwstatic.com/image/upload/f_auto,q_70,w_1200/v1/propertyimages/6/6657/xpx3uuf1tsse89jhyfgs',
+      'https://a.hwstatic.com/image/upload/f_auto,q_70,w_1200/v1/propertyimages/6/6657/qj0z3fqeldq8alicfllo',
+      'https://a.hwstatic.com/image/upload/f_auto,q_70,w_1200/v1/propertyimages/6/6657/rkfch0kzsxm0yaiuknyv',
+    ],
     city: 'Madrid',
     hostelName: 'Cats Hostel Sol',
     nights: 3,
@@ -237,6 +242,11 @@ export const STAYS: Stay[] = [
   },
   {
     id: 'stay-barcelona',
+    photos: [
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/v1/propertyimages/6/61557/lhwrzhujtgcoegidsugx.jpg',
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/v1/propertyimages/6/61557/gmsf8dbynnapo4b1h3dy.jpg',
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/v1/propertyimages/6/61557/rlqfhkixmbtecy1jny17.jpg',
+    ],
     city: 'Barcelona',
     hostelName: "St Christopher's Inn",
     nights: 2,
@@ -269,6 +279,11 @@ export const STAYS: Stay[] = [
   },
   {
     id: 'stay-roma',
+    photos: [
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/propertyimages/7/743/o3ntsouseryaj6ngd0su.jpg',
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/propertyimages/7/743/hmutuayrr2qfxzqpvqrn.jpg',
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/propertyimages/7/743/bbexl5swu8fygrjtjugl.jpg',
+    ],
     city: 'Roma',
     hostelName: 'YellowSquare',
     nights: 2,
@@ -301,6 +316,11 @@ export const STAYS: Stay[] = [
   },
   {
     id: 'stay-budapest',
+    photos: [
+      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/369191423.jpg?k=538015023fe92cbe7e5ca6967818efb735ecb4350f7ab8282ea6b597323ee81b&o=',
+      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/369175631.jpg?k=c0fc418aa82bd2ebb8105bdcba7aa257fec021605258e0bfeda937fecca968a6&o=',
+      'https://cf.bstatic.com/xdata/images/hotel/max1024x768/369179294.jpg?k=2c13dd0c815f50eedd173466274afd303873e0b5d295b7f967e1bd5aaeb67bac&o=',
+    ],
     city: 'Budapest',
     hostelName: 'MP Hostel',
     nights: 3,
@@ -332,6 +352,11 @@ export const STAYS: Stay[] = [
   },
   {
     id: 'stay-praga',
+    photos: [
+      'https://cdn.prod.website-files.com/67bdec87ca75a9ecb2c8dbc5/67d1814500610c31e72a1b8e_DMH-Rooms-1.webp',
+      'https://cdn.prod.website-files.com/67bdec87ca75a9ecb2c8dbc5/67d2b173d452d75759382626_DMH-Rooms-3.jpg',
+      'https://cdn.prod.website-files.com/67bdec87ca75a9ecb2c8dbc5/67d1820c9dd7de58cacd5c1d_DMH-Spaces-1.webp',
+    ],
     city: 'Praga',
     hostelName: 'Drunken Monkey',
     nights: 3,
@@ -363,6 +388,11 @@ export const STAYS: Stay[] = [
   },
   {
     id: 'stay-berlin',
+    photos: [
+      'https://www.meininger-hotels.com/fileadmin/_processed_/0/6/csm_MEININGER-Hotel-Berlin-Alexanderplatz-Exterior-view-3-Q9C6900_e907fa08e4.jpg',
+      'https://www.meininger-hotels.com/fileadmin/_processed_/5/7/csm_MEININGER-Hotel-Berlin-Alexanderplatz-Double-Room-1-CSW4638-Web_6bf3a6959c.jpg',
+      'https://www.meininger-hotels.com/fileadmin/_processed_/5/b/csm_MEININGER-Hotel-Berlin-Alexanderplatz-Bar-1-CSW1739-Web_c90b740dc7.jpg',
+    ],
     city: 'Berlín',
     hostelName: 'MEININGER Alexanderplatz',
     nights: 4,
@@ -394,6 +424,11 @@ export const STAYS: Stay[] = [
   },
   {
     id: 'stay-amsterdam-1',
+    photos: [
+      'https://www.clinkhostels.com/wp-content/uploads/2024/06/Ecomama-118-scaled.jpg',
+      'https://www.clinkhostels.com/wp-content/uploads/2025/01/Ecomama-december-2023-low-res-65-scaled.jpg',
+      'https://www.clinkhostels.com/wp-content/uploads/2025/01/IMG_7085-scaled.jpg',
+    ],
     city: 'Amsterdam',
     hostelName: 'ClinkMama',
     nights: 2,
@@ -426,6 +461,11 @@ export const STAYS: Stay[] = [
   },
   {
     id: 'stay-amberes',
+    photos: [
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/v1/propertyimages/8/87064/w6z2wsbc1aq3erwfa1cm.jpg',
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/v1/propertyimages/8/87064/jpi5i2rygg9sfrqgm7p6.jpg',
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/v1/propertyimages/8/87064/tpwbh9aa9hnnbmgbutcu.jpg',
+    ],
     city: 'Amberes',
     hostelName: 'The ASH',
     nights: 1,
@@ -458,6 +498,11 @@ export const STAYS: Stay[] = [
   },
   {
     id: 'stay-amsterdam-2',
+    photos: [
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/v1/propertyimages/6/641/18.jpg',
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/v1/propertyimages/6/641/49.jpg',
+      'https://a.hwstatic.com/image/upload/f_auto,q_auto,w_1200/v1/propertyimages/6/641/25.jpg',
+    ],
     city: 'Amsterdam',
     hostelName: 'Flying Pig Downtown',
     nights: 1,

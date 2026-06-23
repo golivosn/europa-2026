@@ -47,6 +47,8 @@ export interface Stay {
   vibe: string;
   webUrl: string;
   mapUrl: string;
+  /** URLs de fotos del hostel (hotlink; requieren conexión). */
+  photos: string[];
   /** Avisos puntuales (tasa turística, candado, etc.). */
   notes?: string;
 }
