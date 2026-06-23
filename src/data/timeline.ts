@@ -1,16 +1,19 @@
 import type { Leg } from '../types/trip';
 import { LEGS, STAYS } from './trip';
 
-const STAY_BY_CITY = Object.fromEntries(STAYS.map(s => [s.city, s]));
+const STAY_BY_ID = Object.fromEntries(STAYS.map(s => [s.id, s]));
 
+/** Después de qué tramo se muestra cada estadía (por id, porque Amsterdam se repite). */
 const LEG_ARRIVES_AT: Record<string, string> = {
-  'leg-1': 'Madrid',
-  'leg-2': 'Barcelona',
-  'leg-3': 'Roma',
-  'leg-4': 'Budapest',
-  'leg-5': 'Praga',
-  'leg-6': 'Berlín',
-  'leg-7': 'Amsterdam',
+  'leg-1': 'stay-madrid',
+  'leg-2': 'stay-barcelona',
+  'leg-3': 'stay-roma',
+  'leg-4': 'stay-budapest',
+  'leg-5': 'stay-praga',
+  'leg-6': 'stay-berlin',
+  'leg-7': 'stay-amsterdam-1',
+  'leg-8': 'stay-amberes',
+  'leg-9': 'stay-amsterdam-2',
 };
 
 export interface LegItem {
@@ -20,11 +23,12 @@ export interface LegItem {
 
 export interface StayItem {
   kind: 'stay';
+  id: string;
   city: string;
+  hostelName: string;
   nights: number;
   dates: string;
   hostelArea: string;
-  tip: string;
   nightTrainArrival: boolean;
 }
 
@@ -39,17 +43,18 @@ export function buildTimeline(filteredLegs: Leg[]): TimelineItem[] {
 
     items.push({ kind: 'leg', leg });
 
-    const city = LEG_ARRIVES_AT[leg.id];
-    if (city) {
-      const stay = STAY_BY_CITY[city];
+    const stayId = LEG_ARRIVES_AT[leg.id];
+    if (stayId) {
+      const stay = STAY_BY_ID[stayId];
       if (stay) {
         items.push({
           kind: 'stay',
+          id: stay.id,
           city: stay.city,
+          hostelName: stay.hostelName,
           nights: stay.nights,
           dates: stay.dates,
           hostelArea: stay.hostelArea,
-          tip: stay.tip,
           nightTrainArrival: leg.mode === 'night-train',
         });
       }

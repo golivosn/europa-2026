@@ -90,27 +90,25 @@ export default function App() {
               )}
             </div>
 
-            {/* City nights list */}
+            {/* Hostels list */}
             <div>
-              <SectionLabel>Ciudades</SectionLabel>
+              <SectionLabel>Hostels reservados</SectionLabel>
               <div className="divide-y divide-paper-dark">
                 {STAYS.map(stay => {
-                  const isCurrent = tripDay.phase === 'during' && tripDay.currentCity === stay.city;
+                  const isCurrent = tripDay.currentStayId === stay.id;
                   return (
-                    <div key={stay.city} className="flex items-center justify-between py-2">
-                      <div>
+                    <div key={stay.id} className="flex items-start justify-between py-2 gap-2">
+                      <div className="min-w-0">
                         <span className={`text-sm ${isCurrent ? 'font-bold text-emerald-700' : 'text-ink'}`}>
                           {stay.city}
                         </span>
                         {isCurrent && (
                           <span className="ml-1.5 text-[10px] font-mono text-emerald-600">← HOY</span>
                         )}
-                        {stay.nights > 0 && (
-                          <p className="text-[11px] text-ink-faint mt-0.5">{stay.hostelArea}</p>
-                        )}
+                        <p className="text-[11px] text-ink-faint mt-0.5 truncate">{stay.hostelName}</p>
                       </div>
                       <span className="font-mono text-xs text-ink-muted ml-2 shrink-0">
-                        {stay.nights === 0 ? 'day trip' : `${stay.nights}n`}
+                        {stay.nights}n
                       </span>
                     </div>
                   );
@@ -120,17 +118,25 @@ export default function App() {
 
             {/* Budget */}
             <div>
-              <SectionLabel>Transporte estimado</SectionLabel>
+              <SectionLabel>Presupuesto reservado</SectionLabel>
               <div className="space-y-1.5">
                 <div className="flex justify-between text-sm">
-                  <span className="text-ink-muted">Por persona</span>
-                  <span className="font-mono font-bold text-ink">{BUDGET.totalPerPersonUsd}</span>
+                  <span className="text-ink-muted">Transporte (2)</span>
+                  <span className="font-mono text-ink">{BUDGET.transportTwoEur}</span>
                 </div>
                 <div className="flex justify-between text-sm">
-                  <span className="text-ink-muted">Para los dos</span>
-                  <span className="font-mono font-bold text-ink">{BUDGET.totalTwoPersonsUsd}</span>
+                  <span className="text-ink-muted">Hostels (2)</span>
+                  <span className="font-mono text-ink">{BUDGET.hostelsTwoEur}</span>
                 </div>
-                <p className="text-[10px] text-ink-faint mt-1">Sin hostels, comida ni actividades</p>
+                <div className="flex justify-between text-sm pt-1.5 border-t border-paper-dark">
+                  <span className="text-ink font-semibold">Total los dos</span>
+                  <span className="font-mono font-bold text-ink">{BUDGET.grandTotalTwoEur}</span>
+                </div>
+                <div className="flex justify-between text-sm">
+                  <span className="text-ink-muted">Cada uno</span>
+                  <span className="font-mono font-bold text-ink">{BUDGET.grandTotalPerPersonEur}</span>
+                </div>
+                <p className="text-[10px] text-ink-faint mt-1 leading-snug">{BUDGET.note}</p>
               </div>
             </div>
 
@@ -142,7 +148,7 @@ export default function App() {
 
             {/* Checklist */}
             <div>
-              <SectionLabel>Checklist de reservas</SectionLabel>
+              <SectionLabel>Estado de reservas</SectionLabel>
               <Checklist />
             </div>
 
@@ -163,26 +169,25 @@ export default function App() {
           <ModeFilter active={activeFilters} onToggle={toggleFilter} />
           <Timeline items={timelineItems} today={tripDay.today} />
 
-          {/* Mobile: estadías + checklist */}
-          <div className="lg:hidden mt-10 space-y-10">
-            <section>
-              <SectionTitle>Estadías</SectionTitle>
-              <div className="space-y-3">
-                {STAYS.map(stay => (
-                  <StayCard
-                    key={stay.city}
-                    stay={stay}
-                    isCurrent={tripDay.phase === 'during' && tripDay.currentCity === stay.city}
-                  />
-                ))}
-              </div>
-            </section>
+          {/* Hostels — visible en todos los tamaños */}
+          <section className="mt-10">
+            <SectionTitle>Hostels · logística</SectionTitle>
+            <div className="space-y-3">
+              {STAYS.map(stay => (
+                <StayCard
+                  key={stay.id}
+                  stay={stay}
+                  isCurrent={tripDay.currentStayId === stay.id}
+                />
+              ))}
+            </div>
+          </section>
 
-            <section>
-              <SectionTitle>Checklist de reservas</SectionTitle>
-              <Checklist />
-            </section>
-          </div>
+          {/* Mobile: checklist */}
+          <section className="lg:hidden mt-10">
+            <SectionTitle>Estado de reservas</SectionTitle>
+            <Checklist />
+          </section>
 
           <footer className="mt-12 pb-4 text-center">
             <p className="text-xs font-mono text-ink-faint">Europa 2026 · vie 7 ago → sáb 29 ago</p>

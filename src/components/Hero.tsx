@@ -1,8 +1,8 @@
 import { META } from '../data/trip';
 
-const ROUTE = ['COR', 'EZE', 'MAD', 'BCN', 'ROM', 'BUD', 'PRG', 'BER', 'AMS', 'EZE', 'AEP', 'COR'];
-// ✈ where there's a flight to the next city, → otherwise
-const ROUTE_SEP = ['✈', '✈', '→', '✈', '✈', '→', '→', '→', '✈', '→', '✈'];
+const ROUTE = ['COR', 'EZE', 'MAD', 'BCN', 'ROM', 'BUD', 'PRG', 'BER', 'AMS', 'ANT', 'AMS', 'EZE', 'AEP', 'COR'];
+// ✈ where there's a flight to the next city, → otherwise (tren/bus)
+const ROUTE_SEP = ['✈', '✈', '→', '✈', '✈', '→', '→', '→', '→', '→', '✈', '→', '✈'];
 
 export function Hero() {
   return (
