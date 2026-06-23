@@ -5,10 +5,13 @@ import { LEGS, STAYS, BUDGET } from './data/trip';
 import { buildTimeline } from './data/timeline';
 import { useTripDay } from './hooks/useTripDay';
 import { Hero } from './components/Hero';
+import { Navbar } from './components/Navbar';
 import { TodayBanner } from './components/TodayBanner';
 import { ModeFilter } from './components/ModeFilter';
 import { Timeline } from './components/Timeline';
 import { StayCard } from './components/StayCard';
+import { RouteMap } from './components/RouteMap';
+import { CityGuides } from './components/CityGuides';
 import { Alerts } from './components/Alerts';
 import { Checklist } from './components/Checklist';
 
@@ -63,14 +66,15 @@ export default function App() {
   const timelineItems = buildTimeline(filteredLegs);
 
   return (
-    <div className="min-h-screen bg-paper">
+    <div className="min-h-screen bg-paper" id="top">
+      <Navbar />
       <Hero />
       <TodayBanner />
 
       <div className="lg:flex lg:items-start max-w-screen-xl mx-auto">
 
         {/* ── Desktop sidebar ── */}
-        <aside className="hidden lg:flex lg:flex-col w-80 xl:w-96 shrink-0 sticky top-0 h-screen overflow-y-auto border-r border-paper-dark bg-white">
+        <aside className="hidden lg:flex lg:flex-col w-80 xl:w-96 shrink-0 sticky top-14 h-[calc(100vh-3.5rem)] overflow-y-auto border-r border-paper-dark bg-white">
           <div className="p-6 space-y-7 flex-1">
 
             {/* Mini trip status */}
@@ -165,12 +169,20 @@ export default function App() {
           </div>
 
           {/* Timeline */}
-          <SectionTitle>Itinerario</SectionTitle>
-          <ModeFilter active={activeFilters} onToggle={toggleFilter} />
-          <Timeline items={timelineItems} today={tripDay.today} />
+          <section id="itinerario" className="scroll-mt-16">
+            <SectionTitle>Itinerario</SectionTitle>
+            <ModeFilter active={activeFilters} onToggle={toggleFilter} />
+            <Timeline items={timelineItems} today={tripDay.today} />
+          </section>
+
+          {/* Mapa de la ruta */}
+          <section id="mapa" className="mt-10 scroll-mt-16">
+            <SectionTitle>Mapa de la ruta</SectionTitle>
+            <RouteMap currentCity={tripDay.currentCity} />
+          </section>
 
           {/* Hostels — visible en todos los tamaños */}
-          <section className="mt-10">
+          <section id="hostels" className="mt-10 scroll-mt-16">
             <SectionTitle>Hostels · logística</SectionTitle>
             <div className="space-y-3">
               {STAYS.map(stay => (
@@ -181,6 +193,12 @@ export default function App() {
                 />
               ))}
             </div>
+          </section>
+
+          {/* Planes de día por ciudad */}
+          <section id="planes" className="mt-10 scroll-mt-16">
+            <SectionTitle>Planes de día por ciudad</SectionTitle>
+            <CityGuides currentCity={tripDay.currentCity} />
           </section>
 
           {/* Mobile: checklist */}

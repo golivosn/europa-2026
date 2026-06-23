@@ -75,6 +75,22 @@ export interface TripMeta {
   cities: number;
 }
 
+export interface DayPlan {
+  title: string;
+  pace: string;
+  stops: string[];
+  food: string;
+}
+
+export interface CityGuide {
+  city: string;
+  window: string;
+  suggest: string;
+  mustBook: string[];
+  plans: DayPlan[];
+  tips: string[];
+}
+
 export interface BudgetSummary {
   transportPerPersonEur: string;
   transportTwoEur: string;
